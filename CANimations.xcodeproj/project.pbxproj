@@ -13,6 +13,8 @@
 		877BD79D1C99F46200398BF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 877BD79B1C99F46200398BF4 /* Main.storyboard */; };
 		877BD79F1C99F46200398BF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 877BD79E1C99F46200398BF4 /* Assets.xcassets */; };
 		877BD7A21C99F46200398BF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 877BD7A01C99F46200398BF4 /* LaunchScreen.storyboard */; };
+		877BD7AB1C99F5D200398BF4 /* LayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 877BD7AA1C99F5D200398BF4 /* LayerView.m */; };
+		877BD7AD1C99F62800398BF4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877BD7AC1C99F62800398BF4 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		877BD79E1C99F46200398BF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		877BD7A11C99F46200398BF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		877BD7A31C99F46200398BF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		877BD7A91C99F5D200398BF4 /* LayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerView.h; sourceTree = "<group>"; };
+		877BD7AA1C99F5D200398BF4 /* LayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerView.m; sourceTree = "<group>"; };
+		877BD7AC1C99F62800398BF4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				877BD7AD1C99F62800398BF4 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,14 +64,12 @@
 		877BD7911C99F46000398BF4 /* CANimations */ = {
 			isa = PBXGroup;
 			children = (
-				877BD7951C99F46100398BF4 /* AppDelegate.h */,
-				877BD7961C99F46100398BF4 /* AppDelegate.m */,
 				877BD7981C99F46100398BF4 /* ViewController.h */,
 				877BD7991C99F46100398BF4 /* ViewController.m */,
+				877BD7A91C99F5D200398BF4 /* LayerView.h */,
+				877BD7AA1C99F5D200398BF4 /* LayerView.m */,
 				877BD79B1C99F46200398BF4 /* Main.storyboard */,
 				877BD79E1C99F46200398BF4 /* Assets.xcassets */,
-				877BD7A01C99F46200398BF4 /* LaunchScreen.storyboard */,
-				877BD7A31C99F46200398BF4 /* Info.plist */,
 				877BD7921C99F46000398BF4 /* Supporting Files */,
 			);
 			path = CANimations;
@@ -74,6 +78,11 @@
 		877BD7921C99F46000398BF4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				877BD7951C99F46100398BF4 /* AppDelegate.h */,
+				877BD7961C99F46100398BF4 /* AppDelegate.m */,
+				877BD7AC1C99F62800398BF4 /* QuartzCore.framework */,
+				877BD7A01C99F46200398BF4 /* LaunchScreen.storyboard */,
+				877BD7A31C99F46200398BF4 /* Info.plist */,
 				877BD7931C99F46000398BF4 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -152,6 +161,7 @@
 			files = (
 				877BD79A1C99F46100398BF4 /* ViewController.m in Sources */,
 				877BD7971C99F46100398BF4 /* AppDelegate.m in Sources */,
+				877BD7AB1C99F5D200398BF4 /* LayerView.m in Sources */,
 				877BD7941C99F46000398BF4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +276,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VG.CANimations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -277,6 +288,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VG.CANimations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -299,6 +311,7 @@
 				877BD7A81C99F46200398BF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

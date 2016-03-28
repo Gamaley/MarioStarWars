@@ -1,25 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSh-1U-CBb" customClass="LayerView">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9TS-YN-fdE">
+                                <rect key="frame" x="250" y="50" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2ah-UM-DJf"/>
+                                    <constraint firstAttribute="width" constant="42" id="LFo-vy-cGY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="TzZ-GU-MCZ">
+                                <rect key="frame" x="220" y="45" width="25" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="7VS-0B-gfM"/>
+                                    <constraint firstAttribute="height" constant="32" id="vXf-kX-Nsp"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9TS-YN-fdE" secondAttribute="trailing" constant="28" id="0TP-IX-zUt"/>
+                            <constraint firstItem="9TS-YN-fdE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="83r-uM-O5g"/>
+                            <constraint firstItem="NSh-1U-CBb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Eee-KX-DbR"/>
+                            <constraint firstItem="9TS-YN-fdE" firstAttribute="leading" secondItem="TzZ-GU-MCZ" secondAttribute="trailing" constant="5" id="TYD-bV-q7F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NSh-1U-CBb" secondAttribute="trailing" constant="-20" id="Ubx-Ob-WTm"/>
+                            <constraint firstItem="TzZ-GU-MCZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="45" id="XbS-La-t8A"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NSh-1U-CBb" secondAttribute="bottom" id="iwJ-xf-CdZ"/>
+                            <constraint firstItem="NSh-1U-CBb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jNp-97-6yP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="coinsLabel" destination="9TS-YN-fdE" id="y4J-lP-yHn"/>
+                        <outlet property="layerView" destination="NSh-1U-CBb" id="RVr-me-xca"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="173.33333333333334" y="326.60000000000002"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="coin" width="216" height="216"/>
+    </resources>
 </document>
