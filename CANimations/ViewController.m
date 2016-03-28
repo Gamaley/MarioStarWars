@@ -13,7 +13,6 @@
 
 @property (weak, nonatomic) IBOutlet LayerView *layerView;
 @property (weak, nonatomic) IBOutlet UILabel *coinsLabel;
-@property (assign, nonatomic, getter=isCoinsAnimating) BOOL coinsAnimate;
 
 @end
 
@@ -23,12 +22,11 @@
 {
     [super viewDidLoad];
     self.coinsLabel.text = [NSString stringWithFormat:@"= %li",self.layerView.coinsCount];
-    self.coinsAnimate = NO;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    if (self.isCoinsAnimating) {
+    if (self.layerView.isCoinsAnimating) {
         return;
     }
     UITouch *touch = [touches anyObject];
@@ -52,16 +50,17 @@
     [planeMoveAnimation setDuration:1.0f];
 
     [self.layerView.planeLayer setPosition:point];
+    
     CGAffineTransform transform = CGAffineTransformMakeRotation(angle);
     self.layerView.planeLayer.transform = CATransform3DMakeAffineTransform(transform);
     planeMoveAnimation.delegate = self;
-    planeMoveAnimation.removedOnCompletion = NO;
+//    planeMoveAnimation.removedOnCompletion = NO;
     [self.layerView.planeLayer addAnimation:planeMoveAnimation forKey:@"MoveShip"];
 }
 
 - (void)animateCoins
 {
-    self.coinsAnimate = YES;
+    self.layerView.coinsAnimate = YES;
     for (int i = 0;  i < self.layerView.coins.count; i++) {
         CALayer *layer = [self.layerView.coins objectAtIndex:i];
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
@@ -92,7 +91,7 @@
                 [self.layerView setShipImageWithImageName:@"ship2.png"];
             }
             [self.layerView.coins removeAllObjects];
-            self.coinsAnimate = NO;
+            self.layerView.coinsAnimate = NO;
         }
     }
 }

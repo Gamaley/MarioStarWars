@@ -13,9 +13,9 @@
 - (void)awakeFromNib
 {
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sky.jpg"]];
-    imageView.contentMode = UIViewContentModeScaleToFill;
+//    imageView.contentMode = UIViewContentModeScaleToFill;
     [self addSubview: imageView];
-    
+    self.coinsAnimate = NO;
     self.planeLayer = [[CALayer alloc] init];
     [self.planeLayer setBounds:CGRectMake(0.0, 0.0, 150, 150)];
     [self.planeLayer setPosition:CGPointMake(160, 160)];
@@ -43,7 +43,6 @@
 - (CALayer *)getCoinLayerInPosition:(CGPoint)point withImage:(CGImageRef)coinImage
 {
     CALayer *coinlayer = [[CALayer alloc] init];
-    coinlayer.zPosition = 15.0f;
     coinlayer.contents = (__bridge id)coinImage;
     coinlayer.bounds = CGRectMake(point.x, point.y, 30, 40);
     coinlayer.position = point;

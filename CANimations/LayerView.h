@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/CALayer.h>
 
-@interface LayerView : UIImageView
+@interface LayerView : UIView
 
 @property (strong, nonatomic) CALayer *planeLayer;
 @property (strong, nonatomic) CALayer *coinLayer;
@@ -17,6 +17,7 @@
 @property (strong, nonatomic) NSMutableArray *coins;
 @property (assign, nonatomic) NSInteger coinsCount;
 
+@property (assign, nonatomic, getter=isCoinsAnimating) BOOL coinsAnimate;
 
 - (float)angleForLayer:(CALayer *)layer withTouchPoint:(CGPoint)point;
 - (CALayer *)getCoinLayerInPosition:(CGPoint)point withImage:(CGImageRef)coinImage;
