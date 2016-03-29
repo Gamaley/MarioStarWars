@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="XJT-oC-trV">
+            <objects>
+                <viewController id="ZI3-SX-aP9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HOn-SU-mWC"/>
+                        <viewControllerLayoutGuide type="bottom" id="mHZ-hF-kSe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8hK-Pa-x19">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4m2-Ly-k3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-191" y="324"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -32,6 +49,43 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTT-LA-coW">
+                                <rect key="frame" x="4" y="20" width="312" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66q-qK-VKk">
+                                <rect key="frame" x="20" y="41" width="114" height="41"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="health" translatesAutoresizingMaskIntoConstraints="NO" id="iBt-V0-PeL">
+                                        <rect key="frame" x="0.0" y="5" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="5ix-M8-ZfG"/>
+                                            <constraint firstAttribute="width" constant="32" id="pn1-xf-RAP"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pmt-bD-ctR">
+                                        <rect key="frame" x="40" y="10" width="74" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="74" id="8Kg-yH-5C4"/>
+                                            <constraint firstAttribute="height" constant="21" id="otw-yv-1ZJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Pmt-bD-ctR" secondAttribute="trailing" id="1GC-OX-jXQ"/>
+                                    <constraint firstItem="iBt-V0-PeL" firstAttribute="top" secondItem="66q-qK-VKk" secondAttribute="top" constant="5" id="6rU-EL-Lak"/>
+                                    <constraint firstAttribute="width" constant="114" id="7PD-1E-qat"/>
+                                    <constraint firstItem="iBt-V0-PeL" firstAttribute="leading" secondItem="66q-qK-VKk" secondAttribute="leading" id="9Xf-Tf-yEE"/>
+                                    <constraint firstItem="Pmt-bD-ctR" firstAttribute="top" secondItem="66q-qK-VKk" secondAttribute="top" constant="10" id="OPU-Ow-tY5"/>
+                                    <constraint firstAttribute="height" constant="41" id="wHu-iA-elK"/>
+                                </constraints>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="TzZ-GU-MCZ">
                                 <rect key="frame" x="220" y="45" width="25" height="32"/>
                                 <constraints>
@@ -43,26 +97,34 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="9TS-YN-fdE" secondAttribute="trailing" constant="28" id="0TP-IX-zUt"/>
+                            <constraint firstItem="66q-qK-VKk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="1cU-Qo-xKt"/>
                             <constraint firstItem="9TS-YN-fdE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="83r-uM-O5g"/>
                             <constraint firstItem="NSh-1U-CBb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Eee-KX-DbR"/>
+                            <constraint firstItem="bTT-LA-coW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="4" id="Qch-gq-GCv"/>
                             <constraint firstItem="9TS-YN-fdE" firstAttribute="leading" secondItem="TzZ-GU-MCZ" secondAttribute="trailing" constant="5" id="TYD-bV-q7F"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NSh-1U-CBb" secondAttribute="trailing" constant="-20" id="Ubx-Ob-WTm"/>
                             <constraint firstItem="TzZ-GU-MCZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="45" id="XbS-La-t8A"/>
+                            <constraint firstItem="bTT-LA-coW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="aqq-Iz-dTi"/>
+                            <constraint firstItem="66q-qK-VKk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="41" id="fHE-eO-fdh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NSh-1U-CBb" secondAttribute="bottom" id="iwJ-xf-CdZ"/>
                             <constraint firstItem="NSh-1U-CBb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jNp-97-6yP"/>
+                            <constraint firstAttribute="trailing" secondItem="bTT-LA-coW" secondAttribute="trailing" constant="4" id="qy6-2I-gru"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="coinsLabel" destination="9TS-YN-fdE" id="y4J-lP-yHn"/>
+                        <outlet property="healthLabel" destination="Pmt-bD-ctR" id="xyH-UW-eqD"/>
                         <outlet property="layerView" destination="NSh-1U-CBb" id="RVr-me-xca"/>
+                        <outlet property="timeLabel" destination="bTT-LA-coW" id="P7D-sR-kTz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="173.33333333333334" y="326.60000000000002"/>
+            <point key="canvasLocation" x="301" y="324"/>
         </scene>
     </scenes>
     <resources>
         <image name="coin" width="216" height="216"/>
+        <image name="health" width="412" height="412"/>
     </resources>
 </document>

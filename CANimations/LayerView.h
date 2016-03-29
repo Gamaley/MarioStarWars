@@ -13,14 +13,17 @@
 
 @property (strong, nonatomic) CALayer *planeLayer;
 @property (strong, nonatomic) CALayer *coinLayer;
+@property (strong, nonatomic) CALayer *lazerLayer;
+@property (strong, nonatomic) CALayer *burstLayer;
 
 @property (strong, nonatomic) NSMutableArray *coins;
 @property (assign, nonatomic) NSInteger coinsCount;
+@property (assign, nonatomic) CGPoint lastCoinPosition;
 
 @property (assign, nonatomic, getter=isCoinsAnimating) BOOL coinsAnimate;
 
 - (float)angleForLayer:(CALayer *)layer withTouchPoint:(CGPoint)point;
 - (CALayer *)getCoinLayerInPosition:(CGPoint)point withImage:(CGImageRef)coinImage;
-- (void)setShipImageWithImageName:(NSString *)name;
+- (void)setLayerContents:(CALayer *)layer withImageName:(NSString *)name;
 
 @end
