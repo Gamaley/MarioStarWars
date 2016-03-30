@@ -102,7 +102,7 @@
 {
     [self countDown];
     BOOL rand = arc4random_uniform(100000) % 2;
-    CGPoint toLazerPoint;
+    CGPoint toLazerPoint;// =CGPointMake([UIScreen mainScreen].bounds.size.width+50,[UIScreen mainScreen].bounds.size.height);
     if (rand) {
         toLazerPoint = CGPointMake([UIScreen mainScreen].bounds.size.width+50, arc4random_uniform([UIScreen mainScreen].bounds.size.height));
     } else {
@@ -154,13 +154,14 @@
     CGRect laserRect = [[self.layerView.lazerLayer presentationLayer] frame];
     CGRect planeRect = [[self.layerView.planeLayer presentationLayer] frame];
     planeRect.origin.x += 40;
-    planeRect.origin.y += 15;
+    planeRect.origin.y += 25;
     planeRect.size.width = 50.f;
     planeRect.size.height = 100.f;
     
     laserRect.origin.x += 5;
     laserRect.origin.y += 10;
     laserRect.size.width = 10;
+    laserRect.size.height = 80;
     
     if (CGRectIntersectsRect(laserRect, planeRect)) {
         CAKeyframeAnimation *burstAnimation = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
@@ -186,7 +187,7 @@
 
 - (void)finishLevel
 {
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - <CAAnimationDelegate>
