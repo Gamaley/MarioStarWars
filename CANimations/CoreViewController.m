@@ -11,10 +11,14 @@
 #import <Google/SignIn.h>
 #import "CoreViewController.h"
 
+static const CGFloat FacebookLoginButtonWidth = 124.f;
+
 @interface CoreViewController () <FBSDKLoginButtonDelegate, GIDSignInUIDelegate>
 
-@property (strong, nonatomic) FBSDKLoginButton *loginButton;
+@property (weak, nonatomic) IBOutlet FBSDKLoginButton *loginButton;
 @property (weak, nonatomic) IBOutlet GIDSignInButton *googleButton;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftPaddingFacbookButtonConstraint;
 
 @end
 
@@ -23,14 +27,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.loginButton = [[FBSDKLoginButton alloc] init];
-    self.loginButton.center = self.view.center;
     self.loginButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     self.loginButton.delegate = self;
     self.loginButton.loginBehavior = FBSDKLoginBehaviorSystemAccount;
     [self.view addSubview:self.loginButton];
-//    self.googleButton.style = kGIDSignInButtonStyleIconOnly;
     [GIDSignIn sharedInstance].uiDelegate = self;
+//    [NSBundle mainBundle];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    CGFloat padding = (screenWidth - FacebookLoginButtonWidth)/2;
+    self.leftPaddingFacbookButtonConstraint.constant = padding;
+    [self.view layoutIfNeeded];
 }
 
 - (IBAction)startButton:(UIButton *)sender
