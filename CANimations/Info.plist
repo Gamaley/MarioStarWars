@@ -2,6 +2,37 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbauth2</string>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>facebook.com</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
+			<key>fbcdn.net</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
+			<key>akamaihd.net</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -23,7 +54,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb219270975103363</string>
+				<string>fb269956130003503</string>
 			</array>
 		</dict>
 		<dict>
@@ -46,16 +77,9 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>219270975103363</string>
+	<string>269956130003503</string>
 	<key>FacebookDisplayName</key>
-	<string>MarioStarWars</string>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>fbapi</string>
-		<string>fb-messenger-api</string>
-		<string>fbauth2</string>
-		<string>fbshareextension</string>
-	</array>
+	<string>TestApp</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

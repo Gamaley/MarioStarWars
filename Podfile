@@ -7,6 +7,9 @@ target 'CANimations' do
 
 pod 'Google'
 pod 'Google/SignIn'
+pod 'FBSDKCoreKit'
+pod 'FBSDKLoginKit'
+pod 'FBSDKShareKit'
 
 end
 

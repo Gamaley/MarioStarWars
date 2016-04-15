@@ -25,7 +25,15 @@
     NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
     
     [GIDSignIn sharedInstance].delegate = self;
+    
+    [[FBSDKApplicationDelegate sharedInstance] application:application
+                             didFinishLaunchingWithOptions:launchOptions];
     return YES;
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    [FBSDKAppEvents activateApp];
 }
 
 - (BOOL)application:(UIApplication *)application
@@ -46,9 +54,8 @@
                                       annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
 }
 
-- (void)signIn:(GIDSignIn *)signIn
-didSignInForUser:(GIDGoogleUser *)user
-     withError:(NSError *)error {
+
+- (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
     // Perform any operations on signed in user here.
     NSString *userId = user.userID;                  // For client-side use only!
     NSString *idToken = user.authentication.idToken; // Safe to send to the server
@@ -56,12 +63,11 @@ didSignInForUser:(GIDGoogleUser *)user
     NSString *givenName = user.profile.givenName;
     NSString *familyName = user.profile.familyName;
     NSString *email = user.profile.email;
+    
     // ...
 }
 
-- (void)signIn:(GIDSignIn *)signIn
-didDisconnectWithUser:(GIDGoogleUser *)user
-     withError:(NSError *)error {
+- (void)signIn:(GIDSignIn *)signIn didDisconnectWithUser:(GIDGoogleUser *)user withError:(NSError *)error {
     // Perform any operations when the user disconnects from app here.
     // ...
 }

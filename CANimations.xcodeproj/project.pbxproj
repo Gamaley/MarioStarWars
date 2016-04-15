@@ -16,9 +16,6 @@
 		877BD7A21C99F46200398BF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 877BD7A01C99F46200398BF4 /* LaunchScreen.storyboard */; };
 		877BD7AB1C99F5D200398BF4 /* LayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 877BD7AA1C99F5D200398BF4 /* LayerView.m */; };
 		877BD7AD1C99F62800398BF4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877BD7AC1C99F62800398BF4 /* QuartzCore.framework */; };
-		879922DF1CAAB4D200F14517 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879922DC1CAAB4D200F14517 /* FBSDKCoreKit.framework */; };
-		879922E01CAAB4D200F14517 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879922DD1CAAB4D200F14517 /* FBSDKLoginKit.framework */; };
-		879922E11CAAB4D200F14517 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879922DE1CAAB4D200F14517 /* FBSDKShareKit.framework */; };
 		879922E41CAAB73D00F14517 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879922E31CAAB73D00F14517 /* CoreViewController.m */; };
 		DB011CB4E9F87F51FD720AB3 /* libPods-CANimations.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B8F410D7F2B967353E3DD5 /* libPods-CANimations.a */; };
 /* End PBXBuildFile section */
@@ -41,9 +38,6 @@
 		877BD7A91C99F5D200398BF4 /* LayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerView.h; sourceTree = "<group>"; };
 		877BD7AA1C99F5D200398BF4 /* LayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerView.m; sourceTree = "<group>"; };
 		877BD7AC1C99F62800398BF4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		879922DC1CAAB4D200F14517 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		879922DD1CAAB4D200F14517 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		879922DE1CAAB4D200F14517 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		879922E21CAAB73D00F14517 /* CoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreViewController.h; sourceTree = "<group>"; };
 		879922E31CAAB73D00F14517 /* CoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,9 +47,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				879922DF1CAAB4D200F14517 /* FBSDKCoreKit.framework in Frameworks */,
-				879922E01CAAB4D200F14517 /* FBSDKLoginKit.framework in Frameworks */,
-				879922E11CAAB4D200F14517 /* FBSDKShareKit.framework in Frameworks */,
 				877BD7AD1C99F62800398BF4 /* QuartzCore.framework in Frameworks */,
 				DB011CB4E9F87F51FD720AB3 /* libPods-CANimations.a in Frameworks */,
 			);
@@ -121,9 +112,6 @@
 				871211631CAAD65A00289B8C /* GoogleService-Info.plist */,
 				877BD7951C99F46100398BF4 /* AppDelegate.h */,
 				877BD7961C99F46100398BF4 /* AppDelegate.m */,
-				879922DC1CAAB4D200F14517 /* FBSDKCoreKit.framework */,
-				879922DD1CAAB4D200F14517 /* FBSDKLoginKit.framework */,
-				879922DE1CAAB4D200F14517 /* FBSDKShareKit.framework */,
 				877BD7AC1C99F62800398BF4 /* QuartzCore.framework */,
 				877BD7A01C99F46200398BF4 /* LaunchScreen.storyboard */,
 				877BD7A31C99F46200398BF4 /* Info.plist */,

@@ -14,6 +14,7 @@
 @interface CoreViewController () <FBSDKLoginButtonDelegate, GIDSignInUIDelegate>
 
 @property (strong, nonatomic) FBSDKLoginButton *loginButton;
+@property (weak, nonatomic) IBOutlet GIDSignInButton *googleButton;
 
 @end
 
@@ -26,8 +27,9 @@
     self.loginButton.center = self.view.center;
     self.loginButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     self.loginButton.delegate = self;
+    self.loginButton.loginBehavior = FBSDKLoginBehaviorSystemAccount;
     [self.view addSubview:self.loginButton];
-    
+//    self.googleButton.style = kGIDSignInButtonStyleIconOnly;
     [GIDSignIn sharedInstance].uiDelegate = self;
 }
 
@@ -47,5 +49,27 @@
 {
     
 }
+
+#pragma mark - <GIDSignInUIDelegate>
+
+//- (void)signInWillDispatch:(GIDSignIn *)signIn error:(NSError *)error
+//{
+//    if (signIn.currentUser.userID) {
+//        self.googleButton.style = kGIDSignInButtonStyleIconOnly;
+//    } else {
+//       self.googleButton.style = kGIDSignInButtonStyleWide;
+//    }
+//}
+//
+//
+//- (void)signIn:(GIDSignIn *)signIn dismissViewController:(UIViewController *)viewController
+//{
+//    
+//}
+//
+//- (void)signIn:(GIDSignIn *)signIn presentViewController:(UIViewController *)viewController
+//{
+//    
+//}
 
 @end

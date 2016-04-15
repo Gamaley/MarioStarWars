@@ -46,6 +46,9 @@
                             <constraint firstItem="mHZ-hF-kSe" firstAttribute="top" secondItem="Kc0-FO-hQx" secondAttribute="bottom" constant="79" id="kXl-aw-THs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="googleButton" destination="Nr1-w8-vfP" id="Qar-jD-YsE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4m2-Ly-k3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
