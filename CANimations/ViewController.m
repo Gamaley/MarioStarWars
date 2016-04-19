@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "LayerView.h"
+#import "UIWindow+AdvancedWindow.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -187,7 +189,11 @@
 
 - (void)finishLevel
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    UIStoryboard *secondStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UIViewController *newViewController = [secondStoryBoard instantiateInitialViewController];
+    
+    UIWindow *window = [(AppDelegate *)[UIApplication sharedApplication].delegate window];
+    [window setNewRootViewController:newViewController animationType:AnimationTypeRight];
 }
 
 #pragma mark - <CAAnimationDelegate>

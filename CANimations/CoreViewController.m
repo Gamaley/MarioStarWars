@@ -10,6 +10,9 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <Google/SignIn.h>
 #import "CoreViewController.h"
+#import "ViewController.h"
+#import "UIWindow+AdvancedWindow.h"
+#import "AppDelegate.h"
 
 static const CGFloat FacebookLoginButtonWidth = 124.f;
 
@@ -17,12 +20,14 @@ static const CGFloat FacebookLoginButtonWidth = 124.f;
 
 @property (weak, nonatomic) IBOutlet FBSDKLoginButton *loginButton;
 @property (weak, nonatomic) IBOutlet GIDSignInButton *googleButton;
-
+@property (weak, nonatomic) IBOutlet UITextField *levelTextField;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftPaddingFacbookButtonConstraint;
 
 @end
 
 @implementation CoreViewController
+
+#pragma mark - Lifecycle
 
 - (void)viewDidLoad
 {
@@ -45,9 +50,42 @@ static const CGFloat FacebookLoginButtonWidth = 124.f;
     [self.view layoutIfNeeded];
 }
 
+#pragma mark - IBActions
+
 - (IBAction)startButton:(UIButton *)sender
 {
+    if (!self.levelTextField.text.length) {
+        [self shakeTextField];
+        return;
+    }
     
+    UIStoryboard *secondStoryBoard = [UIStoryboard storyboardWithName:@"GameStoryboard" bundle:[NSBundle mainBundle]];
+    UIViewController *newViewController = [secondStoryBoard instantiateInitialViewController];
+
+    UIWindow *window = [(AppDelegate *)[UIApplication sharedApplication].delegate window];
+    [window setNewRootViewController:newViewController animationType:AnimationTypeLeft];
+}
+
+#pragma mark - Overrides
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    if ([self.levelTextField isFirstResponder]) {
+        [self.levelTextField resignFirstResponder];
+    }
+}
+
+#pragma mark - Private
+
+- (void)shakeTextField
+{
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"position.x"];
+    animation.values = @[@0, @10, @-10, @10, @0];
+    animation.keyTimes = @[@0, @(1 / 6.0), @(3 / 6.0), @(5 / 6.0), @1];
+    animation.duration = 0.3;
+    
+    animation.additive = YES;
+    [self.levelTextField.layer addAnimation:animation forKey:@"shake"];
 }
 
 #pragma mark - <FBSDKLoginButtonDelegate>

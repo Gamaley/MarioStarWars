@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		870D07971CC654D900E5560F /* UIWindow+AdvancedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 870D07961CC654D900E5560F /* UIWindow+AdvancedWindow.m */; };
+		870D079B1CC6585100E5560F /* GameStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 870D079A1CC6585100E5560F /* GameStoryboard.storyboard */; };
 		871211641CAAD65A00289B8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 871211631CAAD65A00289B8C /* GoogleService-Info.plist */; };
 		877BD7941C99F46000398BF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 877BD7931C99F46000398BF4 /* main.m */; };
 		877BD7971C99F46100398BF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 877BD7961C99F46100398BF4 /* AppDelegate.m */; };
@@ -24,6 +26,9 @@
 		11195716F3178C0697760735 /* Pods-CANimations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CANimations.release.xcconfig"; path = "Pods/Target Support Files/Pods-CANimations/Pods-CANimations.release.xcconfig"; sourceTree = "<group>"; };
 		56B8F410D7F2B967353E3DD5 /* libPods-CANimations.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CANimations.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EC8CBF724E3B7B0874CD91 /* Pods-CANimations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CANimations.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CANimations/Pods-CANimations.debug.xcconfig"; sourceTree = "<group>"; };
+		870D07951CC654D900E5560F /* UIWindow+AdvancedWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+AdvancedWindow.h"; sourceTree = "<group>"; };
+		870D07961CC654D900E5560F /* UIWindow+AdvancedWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+AdvancedWindow.m"; sourceTree = "<group>"; };
+		870D079A1CC6585100E5560F /* GameStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameStoryboard.storyboard; sourceTree = "<group>"; };
 		871211631CAAD65A00289B8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		877BD78F1C99F46000398BF4 /* CANimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CANimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		877BD7931C99F46000398BF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -100,6 +105,7 @@
 				877BD7A91C99F5D200398BF4 /* LayerView.h */,
 				877BD7AA1C99F5D200398BF4 /* LayerView.m */,
 				877BD79B1C99F46200398BF4 /* Main.storyboard */,
+				870D079A1CC6585100E5560F /* GameStoryboard.storyboard */,
 				877BD79E1C99F46200398BF4 /* Assets.xcassets */,
 				877BD7921C99F46000398BF4 /* Supporting Files */,
 			);
@@ -109,6 +115,8 @@
 		877BD7921C99F46000398BF4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				870D07951CC654D900E5560F /* UIWindow+AdvancedWindow.h */,
+				870D07961CC654D900E5560F /* UIWindow+AdvancedWindow.m */,
 				871211631CAAD65A00289B8C /* GoogleService-Info.plist */,
 				877BD7951C99F46100398BF4 /* AppDelegate.h */,
 				877BD7961C99F46100398BF4 /* AppDelegate.m */,
@@ -182,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				877BD7A21C99F46200398BF4 /* LaunchScreen.storyboard in Resources */,
+				870D079B1CC6585100E5560F /* GameStoryboard.storyboard in Resources */,
 				871211641CAAD65A00289B8C /* GoogleService-Info.plist in Resources */,
 				877BD79F1C99F46200398BF4 /* Assets.xcassets in Resources */,
 				877BD79D1C99F46200398BF4 /* Main.storyboard in Resources */,
@@ -248,6 +257,7 @@
 				877BD7971C99F46100398BF4 /* AppDelegate.m in Sources */,
 				877BD7AB1C99F5D200398BF4 /* LayerView.m in Sources */,
 				877BD7941C99F46000398BF4 /* main.m in Sources */,
+				870D07971CC654D900E5560F /* UIWindow+AdvancedWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
