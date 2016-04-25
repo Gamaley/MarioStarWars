@@ -10,6 +10,8 @@
 #import "LayerView.h"
 #import "UIWindow+AdvancedWindow.h"
 #import "AppDelegate.h"
+#import "SoundManager.h"
+
 
 @interface ViewController ()
 
@@ -23,6 +25,8 @@
 @property (assign, nonatomic) NSTimeInterval secondsCount;
 @property (assign, nonatomic) NSInteger healthCount;
 
+@property (strong, nonatomic) SoundManager *soundManafer;
+
 @end
 
 @implementation ViewController
@@ -33,6 +37,7 @@
 {
     [super viewDidLoad];
     [self setupPlayground];
+    self.soundManafer = [SoundManager defaultManager];
 }
 
 //- (void)dealloc
@@ -72,10 +77,10 @@
     float angle = [self.layerView angleForLayer:self.layerView.planeLayer withTouchPoint:point];
     
     CABasicAnimation *planeMoveAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
-    [planeMoveAnimation setFromValue:[NSValue valueWithCGPoint:[[self.layerView.planeLayer presentationLayer] position]]];
-    [planeMoveAnimation setToValue:[NSValue valueWithCGPoint:point]];
-    [planeMoveAnimation setDuration:1.0f];
-    [self.layerView.planeLayer setPosition:point];
+    planeMoveAnimation.fromValue = [NSValue valueWithCGPoint:((CALayer *)self.layerView.planeLayer.presentationLayer).position];
+    planeMoveAnimation.toValue = [NSValue valueWithCGPoint:point];
+    planeMoveAnimation.duration = 1.0f;
+    self.layerView.planeLayer.position = point;
     
     CGAffineTransform transform = CGAffineTransformMakeRotation(angle);
     self.layerView.planeLayer.transform = CATransform3DMakeAffineTransform(transform);
@@ -90,12 +95,12 @@
         CALayer *layer = [self.layerView.coins objectAtIndex:i];
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
         animation.fromValue = [NSValue valueWithCGPoint:layer.position];
-        animation.toValue = [NSValue valueWithCGPoint:[[self.layerView.planeLayer presentationLayer] position]];
+        animation.toValue = [NSValue valueWithCGPoint:((CALayer *)self.layerView.planeLayer.presentationLayer).position];
         animation.duration = 0.9f;
         if (self.layerView.coins.count -1 == i) {
             animation.delegate = self;
         }
-        [layer setPosition:[[self.layerView.planeLayer presentationLayer] position]];
+        layer.position = ((CALayer *)self.layerView.planeLayer.presentationLayer).position;
         [layer addAnimation:animation forKey:@"coinAnimation"];
     }
 }
@@ -111,9 +116,10 @@
         toLazerPoint = CGPointMake(arc4random_uniform([UIScreen mainScreen].bounds.size.width),[UIScreen mainScreen].bounds.size.height+50);
     }
     CABasicAnimation *lazerAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
-    [lazerAnimation setFromValue:[NSValue valueWithCGPoint:self.layerView.lazerLayer.frame.origin]];
-    [lazerAnimation setToValue:[NSValue valueWithCGPoint:toLazerPoint]];
-    lazerAnimation.duration = .5f;
+    
+    lazerAnimation.fromValue = [NSValue valueWithCGPoint:self.layerView.lazerLayer.frame.origin];
+    lazerAnimation.toValue = [NSValue valueWithCGPoint:toLazerPoint];
+    lazerAnimation.duration = 0.5f;
     
     float angle = [self.layerView angleForLayer:self.layerView.lazerLayer withTouchPoint:toLazerPoint];
     CGAffineTransform transform = CGAffineTransformMakeRotation(angle);
@@ -148,6 +154,7 @@
         }];
         [alertController addAction:doneAction];
         [self showViewController:alertController sender:nil];
+        [weakSelf.soundManafer.clearPlayer play];
     }
 }
 
@@ -181,8 +188,10 @@
             }];
             [alertController addAction:doneAction];
             [self showViewController:alertController sender:nil];
+            [weakSelf.soundManafer.diePlayer play];
         }
         self.healthLabel.text = [NSString stringWithFormat:@"%ld%c",self.healthCount,'%'];
+        [self.soundManafer.damagePlayer play];
         NSLog(@"BOOM");
     }
 }
@@ -208,8 +217,10 @@
                 self.layerView.coinsCount++;
                 self.coinsLabel.text = [NSString stringWithFormat:@"= %li",self.layerView.coinsCount];
             }
-            if (self.layerView.coinsCount > 9) {
+                [self.soundManafer.coinPlayer play];
+            if (self.layerView.coinsCount == 10) {
                 [self.layerView setLayerContents:self.layerView.planeLayer withImageName:@"ship2.png"];
+                [self.soundManafer.powerUpPlayer play];
             }
             [self.layerView.coins removeAllObjects];
             self.layerView.coinsAnimate = NO;

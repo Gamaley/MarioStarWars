@@ -33,12 +33,10 @@ static const CGFloat FacebookLoginButtonWidth = 124.f;
 {
     [super viewDidLoad];
     self.loginButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
-    self.loginButton.delegate = self;
-    self.loginButton.loginBehavior = FBSDKLoginBehaviorSystemAccount;
-    [self.view addSubview:self.loginButton];
+//    self.loginButton.delegate = self;
+    self.loginButton.loginBehavior = FBSDKLoginBehaviorWeb;
     [GIDSignIn sharedInstance].uiDelegate = self;
 //    [NSBundle mainBundle];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -104,11 +102,7 @@ static const CGFloat FacebookLoginButtonWidth = 124.f;
 
 //- (void)signInWillDispatch:(GIDSignIn *)signIn error:(NSError *)error
 //{
-//    if (signIn.currentUser.userID) {
-//        self.googleButton.style = kGIDSignInButtonStyleIconOnly;
-//    } else {
-//       self.googleButton.style = kGIDSignInButtonStyleWide;
-//    }
+//    
 //}
 //
 //

@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		870D07971CC654D900E5560F /* UIWindow+AdvancedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 870D07961CC654D900E5560F /* UIWindow+AdvancedWindow.m */; };
 		870D079B1CC6585100E5560F /* GameStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 870D079A1CC6585100E5560F /* GameStoryboard.storyboard */; };
+		871029691CCE6AEC00E99C8A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871029681CCE6AEC00E99C8A /* AVFoundation.framework */; };
+		8710296B1CCE6D7000E99C8A /* battle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8710296A1CCE6D7000E99C8A /* battle.mp3 */; };
+		8710296D1CCE851F00E99C8A /* coinsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8710296C1CCE851F00E99C8A /* coinsound.mp3 */; };
+		8710296F1CCE8AD400E99C8A /* powerup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8710296E1CCE8AD400E99C8A /* powerup.wav */; };
+		871029711CCE8D9700E99C8A /* mariodie.wav in Resources */ = {isa = PBXBuildFile; fileRef = 871029701CCE8D9700E99C8A /* mariodie.wav */; };
+		871029731CCE8DA600E99C8A /* clear.wav in Resources */ = {isa = PBXBuildFile; fileRef = 871029721CCE8DA600E99C8A /* clear.wav */; };
+		871029761CCE910900E99C8A /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 871029751CCE910900E99C8A /* SoundManager.m */; };
 		871211641CAAD65A00289B8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 871211631CAAD65A00289B8C /* GoogleService-Info.plist */; };
 		877BD7941C99F46000398BF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 877BD7931C99F46000398BF4 /* main.m */; };
 		877BD7971C99F46100398BF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 877BD7961C99F46100398BF4 /* AppDelegate.m */; };
@@ -29,6 +36,14 @@
 		870D07951CC654D900E5560F /* UIWindow+AdvancedWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+AdvancedWindow.h"; sourceTree = "<group>"; };
 		870D07961CC654D900E5560F /* UIWindow+AdvancedWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+AdvancedWindow.m"; sourceTree = "<group>"; };
 		870D079A1CC6585100E5560F /* GameStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameStoryboard.storyboard; sourceTree = "<group>"; };
+		871029681CCE6AEC00E99C8A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8710296A1CCE6D7000E99C8A /* battle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = battle.mp3; sourceTree = "<group>"; };
+		8710296C1CCE851F00E99C8A /* coinsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coinsound.mp3; sourceTree = "<group>"; };
+		8710296E1CCE8AD400E99C8A /* powerup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = powerup.wav; sourceTree = "<group>"; };
+		871029701CCE8D9700E99C8A /* mariodie.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mariodie.wav; sourceTree = "<group>"; };
+		871029721CCE8DA600E99C8A /* clear.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clear.wav; sourceTree = "<group>"; };
+		871029741CCE910900E99C8A /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
+		871029751CCE910900E99C8A /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
 		871211631CAAD65A00289B8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		877BD78F1C99F46000398BF4 /* CANimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CANimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		877BD7931C99F46000398BF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				871029691CCE6AEC00E99C8A /* AVFoundation.framework in Frameworks */,
 				877BD7AD1C99F62800398BF4 /* QuartzCore.framework in Frameworks */,
 				DB011CB4E9F87F51FD720AB3 /* libPods-CANimations.a in Frameworks */,
 			);
@@ -63,6 +79,8 @@
 		15FF3E2756ED22D846FA307F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				877BD7AC1C99F62800398BF4 /* QuartzCore.framework */,
+				871029681CCE6AEC00E99C8A /* AVFoundation.framework */,
 				56B8F410D7F2B967353E3DD5 /* libPods-CANimations.a */,
 			);
 			name = Frameworks;
@@ -75,6 +93,81 @@
 				11195716F3178C0697760735 /* Pods-CANimations.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		871029771CCE9A1E00E99C8A /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				871029701CCE8D9700E99C8A /* mariodie.wav */,
+				871029721CCE8DA600E99C8A /* clear.wav */,
+				8710296E1CCE8AD400E99C8A /* powerup.wav */,
+				8710296C1CCE851F00E99C8A /* coinsound.mp3 */,
+				8710296A1CCE6D7000E99C8A /* battle.mp3 */,
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
+		871029781CCE9A8300E99C8A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				877BD7A01C99F46200398BF4 /* LaunchScreen.storyboard */,
+				877BD79B1C99F46200398BF4 /* Main.storyboard */,
+				870D079A1CC6585100E5560F /* GameStoryboard.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		871029791CCE9ACF00E99C8A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				877BD7A91C99F5D200398BF4 /* LayerView.h */,
+				877BD7AA1C99F5D200398BF4 /* LayerView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8710297A1CCE9AFB00E99C8A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8710297C1CCE9B5400E99C8A /* GameStoryboard */,
+				8710297B1CCE9B2C00E99C8A /* MainStoryboard */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8710297B1CCE9B2C00E99C8A /* MainStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				879922E21CAAB73D00F14517 /* CoreViewController.h */,
+				879922E31CAAB73D00F14517 /* CoreViewController.m */,
+			);
+			name = MainStoryboard;
+			sourceTree = "<group>";
+		};
+		8710297C1CCE9B5400E99C8A /* GameStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				877BD7981C99F46100398BF4 /* ViewController.h */,
+				877BD7991C99F46100398BF4 /* ViewController.m */,
+			);
+			name = GameStoryboard;
+			sourceTree = "<group>";
+		};
+		8710297D1CCE9BF300E99C8A /* CoreComponents */ = {
+			isa = PBXGroup;
+			children = (
+				8710297E1CCE9C0E00E99C8A /* SoundManager */,
+			);
+			name = CoreComponents;
+			sourceTree = "<group>";
+		};
+		8710297E1CCE9C0E00E99C8A /* SoundManager */ = {
+			isa = PBXGroup;
+			children = (
+				871029741CCE910900E99C8A /* SoundManager.h */,
+				871029751CCE910900E99C8A /* SoundManager.m */,
+			);
+			name = SoundManager;
 			sourceTree = "<group>";
 		};
 		877BD7861C99F46000398BF4 = {
@@ -98,15 +191,10 @@
 		877BD7911C99F46000398BF4 /* CANimations */ = {
 			isa = PBXGroup;
 			children = (
-				877BD7981C99F46100398BF4 /* ViewController.h */,
-				877BD7991C99F46100398BF4 /* ViewController.m */,
-				879922E21CAAB73D00F14517 /* CoreViewController.h */,
-				879922E31CAAB73D00F14517 /* CoreViewController.m */,
-				877BD7A91C99F5D200398BF4 /* LayerView.h */,
-				877BD7AA1C99F5D200398BF4 /* LayerView.m */,
-				877BD79B1C99F46200398BF4 /* Main.storyboard */,
-				870D079A1CC6585100E5560F /* GameStoryboard.storyboard */,
-				877BD79E1C99F46200398BF4 /* Assets.xcassets */,
+				8710297A1CCE9AFB00E99C8A /* Controllers */,
+				8710297D1CCE9BF300E99C8A /* CoreComponents */,
+				871029791CCE9ACF00E99C8A /* Views */,
+				871029781CCE9A8300E99C8A /* Storyboards */,
 				877BD7921C99F46000398BF4 /* Supporting Files */,
 			);
 			path = CANimations;
@@ -115,13 +203,13 @@
 		877BD7921C99F46000398BF4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				877BD79E1C99F46200398BF4 /* Assets.xcassets */,
+				871029771CCE9A1E00E99C8A /* Sound */,
 				870D07951CC654D900E5560F /* UIWindow+AdvancedWindow.h */,
 				870D07961CC654D900E5560F /* UIWindow+AdvancedWindow.m */,
 				871211631CAAD65A00289B8C /* GoogleService-Info.plist */,
 				877BD7951C99F46100398BF4 /* AppDelegate.h */,
 				877BD7961C99F46100398BF4 /* AppDelegate.m */,
-				877BD7AC1C99F62800398BF4 /* QuartzCore.framework */,
-				877BD7A01C99F46200398BF4 /* LaunchScreen.storyboard */,
 				877BD7A31C99F46200398BF4 /* Info.plist */,
 				877BD7931C99F46000398BF4 /* main.m */,
 			);
@@ -190,9 +278,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				877BD7A21C99F46200398BF4 /* LaunchScreen.storyboard in Resources */,
+				8710296F1CCE8AD400E99C8A /* powerup.wav in Resources */,
+				871029711CCE8D9700E99C8A /* mariodie.wav in Resources */,
 				870D079B1CC6585100E5560F /* GameStoryboard.storyboard in Resources */,
+				8710296D1CCE851F00E99C8A /* coinsound.mp3 in Resources */,
 				871211641CAAD65A00289B8C /* GoogleService-Info.plist in Resources */,
 				877BD79F1C99F46200398BF4 /* Assets.xcassets in Resources */,
+				8710296B1CCE6D7000E99C8A /* battle.mp3 in Resources */,
+				871029731CCE8DA600E99C8A /* clear.wav in Resources */,
 				877BD79D1C99F46200398BF4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +350,7 @@
 				877BD7971C99F46100398BF4 /* AppDelegate.m in Sources */,
 				877BD7AB1C99F5D200398BF4 /* LayerView.m in Sources */,
 				877BD7941C99F46000398BF4 /* main.m in Sources */,
+				871029761CCE910900E99C8A /* SoundManager.m in Sources */,
 				870D07971CC654D900E5560F /* UIWindow+AdvancedWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
