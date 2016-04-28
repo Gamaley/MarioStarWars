@@ -34,7 +34,8 @@
     self.lazerLayer.bounds = CGRectMake(0.0, 0.0, 20, 100);
     [self setLayerContents:self.lazerLayer withImageName:@"laser.png"];
     self.lazerLayer.contentsRect = CGRectMake(-0.1, -0.1, 1.2, 1.2);
-    [self.layer addSublayer:self.lazerLayer];
+    [self.layer insertSublayer:self.lazerLayer below:self.planeLayer];
+//    [self.layer addSublayer:self.lazerLayer];
     
     self.burstLayer = [[CALayer alloc] init];
     [self setLayerContents:self.burstLayer withImageName:@"burst.png"];

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nr1-w8-vfP" customClass="GIDSignInButton">
-                                <rect key="frame" x="82" y="253" width="111" height="51"/>
+                                <rect key="frame" x="82" y="241" width="111" height="51"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="lEs-UN-Aw8"/>
@@ -34,7 +34,7 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kc0-FO-hQx">
-                                <rect key="frame" x="121" y="404" width="34" height="30"/>
+                                <rect key="frame" x="121" y="392" width="34" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="VIa-cF-70M"/>
                                     <constraint firstAttribute="width" constant="34" id="eGs-0m-kSK"/>
@@ -45,7 +45,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Level" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H1c-2R-gsL">
-                                <rect key="frame" x="90" y="317" width="97" height="30"/>
+                                <rect key="frame" x="90" y="305" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="TCD-io-J9V"/>
                                 </constraints>
@@ -60,7 +60,7 @@
                             <constraint firstItem="Kc0-FO-hQx" firstAttribute="centerX" secondItem="TKl-go-pPc" secondAttribute="centerX" constant="-2" id="9ti-ka-DrT"/>
                             <constraint firstItem="TKl-go-pPc" firstAttribute="leading" secondItem="8hK-Pa-x19" secondAttribute="leading" constant="78" id="Kpn-sE-yug"/>
                             <constraint firstItem="Kc0-FO-hQx" firstAttribute="top" secondItem="Nr1-w8-vfP" secondAttribute="bottom" constant="100" id="ePq-ZT-G8i"/>
-                            <constraint firstItem="Nr1-w8-vfP" firstAttribute="top" secondItem="TKl-go-pPc" secondAttribute="bottom" constant="25" id="fvv-dx-28d"/>
+                            <constraint firstItem="Nr1-w8-vfP" firstAttribute="top" secondItem="TKl-go-pPc" secondAttribute="bottom" constant="13" id="fvv-dx-28d"/>
                             <constraint firstItem="H1c-2R-gsL" firstAttribute="centerX" secondItem="TKl-go-pPc" secondAttribute="centerX" constant="-2" id="tFi-da-Htn"/>
                             <constraint firstItem="TKl-go-pPc" firstAttribute="top" secondItem="HOn-SU-mWC" secondAttribute="bottom" constant="178" id="v9w-hw-412"/>
                         </constraints>

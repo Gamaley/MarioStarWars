@@ -11,6 +11,7 @@
 #import "UIWindow+AdvancedWindow.h"
 #import "AppDelegate.h"
 #import "SoundManager.h"
+#import "Level.h"
 
 
 @interface ViewController ()
@@ -22,10 +23,12 @@
 
 @property (strong, nonatomic) NSTimer *lazerTimer;
 @property (strong, nonatomic) NSTimer *collision;
+@property (strong, nonatomic) NSTimer *timeLeft;
 @property (assign, nonatomic) NSTimeInterval secondsCount;
 @property (assign, nonatomic) NSInteger healthCount;
 
 @property (strong, nonatomic) SoundManager *soundManafer;
+@property (strong, nonatomic) Level *level;
 
 @end
 
@@ -36,8 +39,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setup];
     [self setupPlayground];
-    self.soundManafer = [SoundManager defaultManager];
 }
 
 //- (void)dealloc
@@ -107,7 +110,6 @@
 
 - (void)animateRandomLazer
 {
-    [self countDown];
     BOOL rand = arc4random_uniform(100000) % 2;
     CGPoint toLazerPoint;// =CGPointMake([UIScreen mainScreen].bounds.size.width+50,[UIScreen mainScreen].bounds.size.height);
     if (rand) {
@@ -115,11 +117,14 @@
     } else {
         toLazerPoint = CGPointMake(arc4random_uniform([UIScreen mainScreen].bounds.size.width),[UIScreen mainScreen].bounds.size.height+50);
     }
+    
+    toLazerPoint = CGPointMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+    
     CABasicAnimation *lazerAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
     
     lazerAnimation.fromValue = [NSValue valueWithCGPoint:self.layerView.lazerLayer.frame.origin];
     lazerAnimation.toValue = [NSValue valueWithCGPoint:toLazerPoint];
-    lazerAnimation.duration = 0.5f;
+    lazerAnimation.duration = 1.5;
     
     float angle = [self.layerView angleForLayer:self.layerView.lazerLayer withTouchPoint:toLazerPoint];
     CGAffineTransform transform = CGAffineTransformMakeRotation(angle);
@@ -133,8 +138,13 @@
     self.secondsCount = 30.f;
     self.healthCount = 100;
     self.healthLabel.text = [NSString stringWithFormat:@"%ld%c",self.healthCount,'%'];
-    self.lazerTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(animateRandomLazer) userInfo:nil repeats:YES];
-    self.collision = [NSTimer scheduledTimerWithTimeInterval:.05 target:self selector:@selector(collisionCheck) userInfo:nil repeats:YES];
+    
+    NSTimeInterval lazerTimerInterval = 1.0/self.level.number;
+    
+    self.lazerTimer = [NSTimer scheduledTimerWithTimeInterval:1.5f target:self selector:@selector(animateRandomLazer) userInfo:nil repeats:YES];
+    self.collision = [NSTimer scheduledTimerWithTimeInterval:lazerTimerInterval target:self selector:@selector(collisionCheck) userInfo:nil repeats:YES];
+    self.timeLeft = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(countDown) userInfo:nil repeats:YES];
+    [self.timeLeft fire];
     [self.lazerTimer fire];
     [self.collision fire];
 }
@@ -147,6 +157,7 @@
     } else {
         [self.lazerTimer invalidate];
         [self.collision invalidate];
+        [self.timeLeft invalidate];
         __weak typeof(self)weakSelf = self;
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Well Done" message:@"Level Completed" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *doneAction = [UIAlertAction actionWithTitle:@"Finish" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -181,6 +192,7 @@
         if (self.healthCount <= 0) {
             [self.lazerTimer invalidate];
             [self.collision invalidate];
+            [self.timeLeft invalidate];
             __weak typeof(self)weakSelf = self;
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Failed" message:@"Plane Destroyed" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *doneAction = [UIAlertAction actionWithTitle:@"Game Over" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -203,6 +215,21 @@
     
     UIWindow *window = [(AppDelegate *)[UIApplication sharedApplication].delegate window];
     [window setNewRootViewController:newViewController animationType:AnimationTypeRight];
+}
+
+- (NSString *)filePath
+{
+    NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
+    return [path stringByAppendingPathComponent:@"level"];
+}
+
+- (void)setup
+{
+    self.soundManafer = [SoundManager defaultManager];
+    self.level = [NSKeyedUnarchiver unarchiveObjectWithFile:[self filePath]];
+    if (!self.level) {
+        self.level = [[Level alloc] initWithLevel:1];
+    }
 }
 
 #pragma mark - <CAAnimationDelegate>

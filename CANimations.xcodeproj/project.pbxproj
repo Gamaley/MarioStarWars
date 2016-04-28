@@ -16,6 +16,7 @@
 		871029711CCE8D9700E99C8A /* mariodie.wav in Resources */ = {isa = PBXBuildFile; fileRef = 871029701CCE8D9700E99C8A /* mariodie.wav */; };
 		871029731CCE8DA600E99C8A /* clear.wav in Resources */ = {isa = PBXBuildFile; fileRef = 871029721CCE8DA600E99C8A /* clear.wav */; };
 		871029761CCE910900E99C8A /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 871029751CCE910900E99C8A /* SoundManager.m */; };
+		871029841CCE9E9300E99C8A /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 871029831CCE9E9300E99C8A /* Level.m */; };
 		871211641CAAD65A00289B8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 871211631CAAD65A00289B8C /* GoogleService-Info.plist */; };
 		877BD7941C99F46000398BF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 877BD7931C99F46000398BF4 /* main.m */; };
 		877BD7971C99F46100398BF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 877BD7961C99F46100398BF4 /* AppDelegate.m */; };
@@ -44,6 +45,8 @@
 		871029721CCE8DA600E99C8A /* clear.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clear.wav; sourceTree = "<group>"; };
 		871029741CCE910900E99C8A /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
 		871029751CCE910900E99C8A /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
+		871029821CCE9E9300E99C8A /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
+		871029831CCE9E9300E99C8A /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 		871211631CAAD65A00289B8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		877BD78F1C99F46000398BF4 /* CANimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CANimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		877BD7931C99F46000398BF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -117,13 +120,13 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
-		871029791CCE9ACF00E99C8A /* Views */ = {
+		871029791CCE9ACF00E99C8A /* CALayerView */ = {
 			isa = PBXGroup;
 			children = (
 				877BD7A91C99F5D200398BF4 /* LayerView.h */,
 				877BD7AA1C99F5D200398BF4 /* LayerView.m */,
 			);
-			name = Views;
+			name = CALayerView;
 			sourceTree = "<group>";
 		};
 		8710297A1CCE9AFB00E99C8A /* Controllers */ = {
@@ -170,6 +173,32 @@
 			name = SoundManager;
 			sourceTree = "<group>";
 		};
+		8710297F1CCE9D2600E99C8A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				870D07951CC654D900E5560F /* UIWindow+AdvancedWindow.h */,
+				870D07961CC654D900E5560F /* UIWindow+AdvancedWindow.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		871029801CCE9D9500E99C8A /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				871029791CCE9ACF00E99C8A /* CALayerView */,
+			);
+			name = UIComponents;
+			sourceTree = "<group>";
+		};
+		871029811CCE9E7700E99C8A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				871029821CCE9E9300E99C8A /* Level.h */,
+				871029831CCE9E9300E99C8A /* Level.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		877BD7861C99F46000398BF4 = {
 			isa = PBXGroup;
 			children = (
@@ -191,9 +220,10 @@
 		877BD7911C99F46000398BF4 /* CANimations */ = {
 			isa = PBXGroup;
 			children = (
+				871029811CCE9E7700E99C8A /* Models */,
 				8710297A1CCE9AFB00E99C8A /* Controllers */,
 				8710297D1CCE9BF300E99C8A /* CoreComponents */,
-				871029791CCE9ACF00E99C8A /* Views */,
+				871029801CCE9D9500E99C8A /* UIComponents */,
 				871029781CCE9A8300E99C8A /* Storyboards */,
 				877BD7921C99F46000398BF4 /* Supporting Files */,
 			);
@@ -203,11 +233,10 @@
 		877BD7921C99F46000398BF4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				877BD79E1C99F46200398BF4 /* Assets.xcassets */,
 				871029771CCE9A1E00E99C8A /* Sound */,
-				870D07951CC654D900E5560F /* UIWindow+AdvancedWindow.h */,
-				870D07961CC654D900E5560F /* UIWindow+AdvancedWindow.m */,
+				8710297F1CCE9D2600E99C8A /* Categories */,
 				871211631CAAD65A00289B8C /* GoogleService-Info.plist */,
+				877BD79E1C99F46200398BF4 /* Assets.xcassets */,
 				877BD7951C99F46100398BF4 /* AppDelegate.h */,
 				877BD7961C99F46100398BF4 /* AppDelegate.m */,
 				877BD7A31C99F46200398BF4 /* Info.plist */,
@@ -347,6 +376,7 @@
 			files = (
 				879922E41CAAB73D00F14517 /* CoreViewController.m in Sources */,
 				877BD79A1C99F46100398BF4 /* ViewController.m in Sources */,
+				871029841CCE9E9300E99C8A /* Level.m in Sources */,
 				877BD7971C99F46100398BF4 /* AppDelegate.m in Sources */,
 				877BD7AB1C99F5D200398BF4 /* LayerView.m in Sources */,
 				877BD7941C99F46000398BF4 /* main.m in Sources */,

@@ -13,6 +13,7 @@
 #import "ViewController.h"
 #import "UIWindow+AdvancedWindow.h"
 #import "AppDelegate.h"
+#import "Level.h"
 
 static const CGFloat FacebookLoginButtonWidth = 124.f;
 
@@ -36,7 +37,6 @@ static const CGFloat FacebookLoginButtonWidth = 124.f;
 //    self.loginButton.delegate = self;
     self.loginButton.loginBehavior = FBSDKLoginBehaviorWeb;
     [GIDSignIn sharedInstance].uiDelegate = self;
-//    [NSBundle mainBundle];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -60,6 +60,7 @@ static const CGFloat FacebookLoginButtonWidth = 124.f;
     UIStoryboard *secondStoryBoard = [UIStoryboard storyboardWithName:@"GameStoryboard" bundle:[NSBundle mainBundle]];
     UIViewController *newViewController = [secondStoryBoard instantiateInitialViewController];
 
+    [self saveLevel];
     UIWindow *window = [(AppDelegate *)[UIApplication sharedApplication].delegate window];
     [window setNewRootViewController:newViewController animationType:AnimationTypeLeft];
 }
@@ -85,6 +86,15 @@ static const CGFloat FacebookLoginButtonWidth = 124.f;
     animation.additive = YES;
     [self.levelTextField.layer addAnimation:animation forKey:@"shake"];
 }
+
+- (void)saveLevel
+{
+    NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
+    NSString *levelPath = [path stringByAppendingPathComponent:@"level"];
+    Level *level = [[Level alloc] initWithLevel:self.levelTextField.text.integerValue];
+    [NSKeyedArchiver archiveRootObject:level toFile:levelPath];
+}
+
 
 #pragma mark - <FBSDKLoginButtonDelegate>
 

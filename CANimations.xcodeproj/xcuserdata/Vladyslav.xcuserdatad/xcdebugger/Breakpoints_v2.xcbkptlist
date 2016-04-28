@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CANimations/LayerView.m"
-            timestampString = "480938630.129846"
+            timestampString = "483309344.150245"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CANimations/LayerView.m"
-            timestampString = "480945186.785323"
+            timestampString = "483309344.150245"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "-angleForLayer:withTouchPoint:"
             landmarkType = "5">
          </BreakpointContent>
