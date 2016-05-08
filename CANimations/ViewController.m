@@ -118,7 +118,7 @@
         toLazerPoint = CGPointMake(arc4random_uniform([UIScreen mainScreen].bounds.size.width),[UIScreen mainScreen].bounds.size.height+50);
     }
     
-    toLazerPoint = CGPointMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+//    toLazerPoint = CGPointMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
     
     CABasicAnimation *lazerAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
     

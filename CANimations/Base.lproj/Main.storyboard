@@ -17,8 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="dIk-86-XGz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nr1-w8-vfP" customClass="GIDSignInButton">
-                                <rect key="frame" x="82" y="241" width="111" height="51"/>
+                                <rect key="frame" x="84" y="241" width="111" height="51"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="lEs-UN-Aw8"/>
@@ -26,43 +29,51 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKl-go-pPc" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="78" y="198" width="124" height="30"/>
+                                <rect key="frame" x="84" y="198" width="111" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="VZQ-DJ-RHP"/>
-                                    <constraint firstAttribute="width" constant="124" id="kWc-iv-Lmf"/>
+                                    <constraint firstAttribute="width" constant="111" id="kWc-iv-Lmf"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kc0-FO-hQx">
-                                <rect key="frame" x="121" y="392" width="34" height="30"/>
+                                <rect key="frame" x="85" y="392" width="111" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="VIa-cF-70M"/>
-                                    <constraint firstAttribute="width" constant="34" id="eGs-0m-kSK"/>
+                                    <constraint firstAttribute="width" constant="111" id="eGs-0m-kSK"/>
                                 </constraints>
-                                <state key="normal" title="Start"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="startButton:" destination="ZI3-SX-aP9" eventType="touchUpInside" id="ld3-nr-EIP"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Level" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H1c-2R-gsL">
-                                <rect key="frame" x="90" y="305" width="97" height="30"/>
+                                <rect key="frame" x="85" y="344" width="111" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="TCD-io-J9V"/>
+                                    <constraint firstAttribute="width" constant="111" id="TCD-io-J9V"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="go"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Kc0-FO-hQx" firstAttribute="top" secondItem="H1c-2R-gsL" secondAttribute="bottom" constant="57" id="2Y9-Iy-fbh"/>
-                            <constraint firstItem="Nr1-w8-vfP" firstAttribute="centerX" secondItem="TKl-go-pPc" secondAttribute="centerX" constant="-2.5" id="90v-e8-OVT"/>
-                            <constraint firstItem="Kc0-FO-hQx" firstAttribute="centerX" secondItem="TKl-go-pPc" secondAttribute="centerX" constant="-2" id="9ti-ka-DrT"/>
-                            <constraint firstItem="TKl-go-pPc" firstAttribute="leading" secondItem="8hK-Pa-x19" secondAttribute="leading" constant="78" id="Kpn-sE-yug"/>
+                            <constraint firstItem="Kc0-FO-hQx" firstAttribute="top" secondItem="H1c-2R-gsL" secondAttribute="bottom" constant="18" id="2Y9-Iy-fbh"/>
+                            <constraint firstItem="Nr1-w8-vfP" firstAttribute="centerX" secondItem="TKl-go-pPc" secondAttribute="centerX" id="90v-e8-OVT"/>
+                            <constraint firstItem="Kc0-FO-hQx" firstAttribute="centerX" secondItem="TKl-go-pPc" secondAttribute="centerX" constant="1" id="9ti-ka-DrT"/>
+                            <constraint firstItem="TKl-go-pPc" firstAttribute="leading" secondItem="8hK-Pa-x19" secondAttribute="leading" constant="84" id="Kpn-sE-yug"/>
+                            <constraint firstItem="dIk-86-XGz" firstAttribute="leading" secondItem="8hK-Pa-x19" secondAttribute="leading" id="YBy-nG-91N"/>
                             <constraint firstItem="Kc0-FO-hQx" firstAttribute="top" secondItem="Nr1-w8-vfP" secondAttribute="bottom" constant="100" id="ePq-ZT-G8i"/>
                             <constraint firstItem="Nr1-w8-vfP" firstAttribute="top" secondItem="TKl-go-pPc" secondAttribute="bottom" constant="13" id="fvv-dx-28d"/>
-                            <constraint firstItem="H1c-2R-gsL" firstAttribute="centerX" secondItem="TKl-go-pPc" secondAttribute="centerX" constant="-2" id="tFi-da-Htn"/>
+                            <constraint firstItem="dIk-86-XGz" firstAttribute="top" secondItem="8hK-Pa-x19" secondAttribute="top" id="kjr-dv-uQ2"/>
+                            <constraint firstAttribute="trailing" secondItem="dIk-86-XGz" secondAttribute="trailing" id="t1m-nR-vRO"/>
+                            <constraint firstItem="H1c-2R-gsL" firstAttribute="centerX" secondItem="TKl-go-pPc" secondAttribute="centerX" constant="1" id="tFi-da-Htn"/>
                             <constraint firstItem="TKl-go-pPc" firstAttribute="top" secondItem="HOn-SU-mWC" secondAttribute="bottom" constant="178" id="v9w-hw-412"/>
+                            <constraint firstItem="mHZ-hF-kSe" firstAttribute="top" secondItem="dIk-86-XGz" secondAttribute="bottom" id="yEo-9B-Upe"/>
                         </constraints>
                     </view>
                     <connections>
@@ -177,6 +188,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="1024" height="768"/>
         <image name="coin" width="216" height="216"/>
         <image name="health" width="412" height="412"/>
     </resources>

@@ -14,6 +14,7 @@
 #import "UIWindow+AdvancedWindow.h"
 #import "AppDelegate.h"
 #import "Level.h"
+#import "SoundManager.h"
 
 static const CGFloat FacebookLoginButtonWidth = 124.f;
 
@@ -52,6 +53,7 @@ static const CGFloat FacebookLoginButtonWidth = 124.f;
 
 - (IBAction)startButton:(UIButton *)sender
 {
+    [[SoundManager defaultManager].buttonPlayer play];
     if (!self.levelTextField.text.length) {
         [self shakeTextField];
         return;

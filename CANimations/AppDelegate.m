@@ -10,6 +10,7 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <Google/SignIn.h>
 #import "AppDelegate.h"
+#import "SoundManager.h"
 
 @interface AppDelegate ()
 
@@ -28,6 +29,8 @@
     
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
+    
+    [SoundManager defaultManager];
     return YES;
 }
 

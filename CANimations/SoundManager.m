@@ -30,12 +30,16 @@
         NSString *powerPath = [[NSBundle mainBundle]pathForResource:@"powerup" ofType:@"wav"];
         NSString *clearPath = [[NSBundle mainBundle]pathForResource:@"clear" ofType:@"wav"];
         NSString *diePath = [[NSBundle mainBundle]pathForResource:@"mariodie" ofType:@"wav"];
-        
+        NSString *monsterPath = [[NSBundle mainBundle]pathForResource:@"monster" ofType:@"wav"];
+        NSString *buttonPath = [[NSBundle mainBundle]pathForResource:@"button_press" ofType:@"wav"];
         self.clearPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:clearPath] error:nil];
         self.coinPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:coinPath] error:nil];
         self.damagePlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:damagePath] error:nil];
         self.diePlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:diePath] error:nil];
         self.powerUpPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:powerPath] error:nil];
+        self.monsterPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:monsterPath] error:nil];
+        self.buttonPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:buttonPath] error:nil];
+
     }
     return self;
 }

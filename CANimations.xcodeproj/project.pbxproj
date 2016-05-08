@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8709F3401CDF7D15002BE9BC /* monster.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8709F33F1CDF7D15002BE9BC /* monster.wav */; };
+		8709F3421CDF7ECE002BE9BC /* button_press.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8709F3411CDF7ECE002BE9BC /* button_press.wav */; };
 		870D07971CC654D900E5560F /* UIWindow+AdvancedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 870D07961CC654D900E5560F /* UIWindow+AdvancedWindow.m */; };
 		870D079B1CC6585100E5560F /* GameStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 870D079A1CC6585100E5560F /* GameStoryboard.storyboard */; };
 		871029691CCE6AEC00E99C8A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871029681CCE6AEC00E99C8A /* AVFoundation.framework */; };
@@ -34,6 +36,8 @@
 		11195716F3178C0697760735 /* Pods-CANimations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CANimations.release.xcconfig"; path = "Pods/Target Support Files/Pods-CANimations/Pods-CANimations.release.xcconfig"; sourceTree = "<group>"; };
 		56B8F410D7F2B967353E3DD5 /* libPods-CANimations.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CANimations.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EC8CBF724E3B7B0874CD91 /* Pods-CANimations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CANimations.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CANimations/Pods-CANimations.debug.xcconfig"; sourceTree = "<group>"; };
+		8709F33F1CDF7D15002BE9BC /* monster.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monster.wav; sourceTree = "<group>"; };
+		8709F3411CDF7ECE002BE9BC /* button_press.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button_press.wav; sourceTree = "<group>"; };
 		870D07951CC654D900E5560F /* UIWindow+AdvancedWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+AdvancedWindow.h"; sourceTree = "<group>"; };
 		870D07961CC654D900E5560F /* UIWindow+AdvancedWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+AdvancedWindow.m"; sourceTree = "<group>"; };
 		870D079A1CC6585100E5560F /* GameStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameStoryboard.storyboard; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 		871029771CCE9A1E00E99C8A /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				8709F3411CDF7ECE002BE9BC /* button_press.wav */,
+				8709F33F1CDF7D15002BE9BC /* monster.wav */,
 				871029701CCE8D9700E99C8A /* mariodie.wav */,
 				871029721CCE8DA600E99C8A /* clear.wav */,
 				8710296E1CCE8AD400E99C8A /* powerup.wav */,
@@ -306,6 +312,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8709F3421CDF7ECE002BE9BC /* button_press.wav in Resources */,
+				8709F3401CDF7D15002BE9BC /* monster.wav in Resources */,
 				877BD7A21C99F46200398BF4 /* LaunchScreen.storyboard in Resources */,
 				8710296F1CCE8AD400E99C8A /* powerup.wav in Resources */,
 				871029711CCE8D9700E99C8A /* mariodie.wav in Resources */,
@@ -501,7 +509,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VG.CANimations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -519,7 +527,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VG.CANimations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

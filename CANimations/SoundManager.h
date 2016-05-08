@@ -15,6 +15,8 @@
 @property (strong, nonatomic) AVAudioPlayer *powerUpPlayer;
 @property (strong, nonatomic) AVAudioPlayer *clearPlayer;
 @property (strong, nonatomic) AVAudioPlayer *diePlayer;
+@property (strong, nonatomic) AVAudioPlayer *monsterPlayer;
+@property (strong, nonatomic) AVAudioPlayer *buttonPlayer;
 
 + (instancetype)defaultManager;
 
