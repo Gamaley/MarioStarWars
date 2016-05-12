@@ -12,7 +12,7 @@
 #import "AppDelegate.h"
 #import "SoundManager.h"
 #import "Level.h"
-
+#import "FireworksEmitterView.h"
 
 @interface ViewController ()
 
@@ -164,8 +164,11 @@
             [weakSelf finishLevel];
         }];
         [alertController addAction:doneAction];
-        [self showViewController:alertController sender:nil];
         [weakSelf.soundManafer.clearPlayer play];
+        FireworksEmitterView *fireworksView = [[FireworksEmitterView alloc] initWithFrame:self.view.frame];
+        [self.view addSubview:fireworksView];
+        [self showViewController:alertController sender:nil];
+        
     }
 }
 
