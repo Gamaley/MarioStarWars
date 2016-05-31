@@ -112,20 +112,20 @@ static const CGFloat FacebookLoginButtonWidth = 124.f;
 
 #pragma mark - <GIDSignInUIDelegate>
 
-//- (void)signInWillDispatch:(GIDSignIn *)signIn error:(NSError *)error
-//{
-//    
-//}
-//
-//
-//- (void)signIn:(GIDSignIn *)signIn dismissViewController:(UIViewController *)viewController
-//{
-//    
-//}
-//
-//- (void)signIn:(GIDSignIn *)signIn presentViewController:(UIViewController *)viewController
-//{
-//    
-//}
+- (void)signInWillDispatch:(GIDSignIn *)signIn error:(NSError *)error
+{
+    
+}
+
+
+- (void)signIn:(GIDSignIn *)signIn dismissViewController:(UIViewController *)viewController
+{
+    
+}
+
+- (void)signIn:(GIDSignIn *)signIn presentViewController:(UIViewController *)viewController
+{
+    
+}
 
 @end

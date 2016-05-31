@@ -15,6 +15,7 @@ static CGFloat const AnimationDuration = .5f;
 static NSString *kPosition = @"position";
 static NSString *kTransform = @"transform";
 
+
 typedef void (^AnimationCompletion) (void);
 
 @interface CAAnimation (AnimationWithBlock)
@@ -24,6 +25,7 @@ typedef void (^AnimationCompletion) (void);
 - (void)animateRootView:(UIView *)rootView withSecondView:(UIView *)secondView animationType:(AnimationType)type withCompletion:(AnimationCompletion)completion;
 
 @end
+
 
 @implementation CAAnimation (AnimationWithBlock)
 
@@ -80,6 +82,9 @@ typedef void (^AnimationCompletion) (void);
 }
 
 @end
+
+
+
 
 @implementation UIWindow (AdvancedWindow)
 

@@ -43,12 +43,6 @@
     [self setupPlayground];
 }
 
-//- (void)dealloc
-//{
-//    [self.lazerTimer invalidate];
-//    [self.collision invalidate];
-//}
-
 #pragma mark - Overrides
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -89,6 +83,7 @@
     self.layerView.planeLayer.transform = CATransform3DMakeAffineTransform(transform);
     planeMoveAnimation.delegate = self;
     [self.layerView.planeLayer addAnimation:planeMoveAnimation forKey:@"planeAnimation"];
+    [self.layerView animateFlyToCoin:YES];
 }
 
 - (void)animateCoins
@@ -139,7 +134,12 @@
     self.healthCount = 100;
     self.healthLabel.text = [NSString stringWithFormat:@"%ld%c",self.healthCount,'%'];
     
-    NSTimeInterval lazerTimerInterval = 1.0/self.level.number;
+    NSTimeInterval lazerTimerInterval;
+    if (self.level.number < 10.0) {
+        lazerTimerInterval = 1.0/10.0;
+    } else {
+        lazerTimerInterval = 1.0/self.level.number;
+    }
     
     self.lazerTimer = [NSTimer scheduledTimerWithTimeInterval:1.5f target:self selector:@selector(animateRandomLazer) userInfo:nil repeats:YES];
     self.collision = [NSTimer scheduledTimerWithTimeInterval:lazerTimerInterval target:self selector:@selector(collisionCheck) userInfo:nil repeats:YES];
@@ -241,6 +241,7 @@
 {
     if (flag) {
         [self animateCoins];
+        [self.layerView animateFlyToCoin:NO];
         if (anim.duration == 0.9f) {
             for (CALayer *layer in self.layerView.coins) {
                 [layer removeFromSuperlayer];

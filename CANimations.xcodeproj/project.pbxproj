@@ -21,6 +21,7 @@
 		871029761CCE910900E99C8A /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 871029751CCE910900E99C8A /* SoundManager.m */; };
 		871029841CCE9E9300E99C8A /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 871029831CCE9E9300E99C8A /* Level.m */; };
 		871211641CAAD65A00289B8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 871211631CAAD65A00289B8C /* GoogleService-Info.plist */; };
+		8744CC7C1CFDB52800E3DAA0 /* SampleXML in Resources */ = {isa = PBXBuildFile; fileRef = 8744CC7B1CFDB52800E3DAA0 /* SampleXML */; };
 		877BD7941C99F46000398BF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 877BD7931C99F46000398BF4 /* main.m */; };
 		877BD7971C99F46100398BF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 877BD7961C99F46100398BF4 /* AppDelegate.m */; };
 		877BD79A1C99F46100398BF4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 877BD7991C99F46100398BF4 /* ViewController.m */; };
@@ -55,6 +56,7 @@
 		871029821CCE9E9300E99C8A /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
 		871029831CCE9E9300E99C8A /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 		871211631CAAD65A00289B8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8744CC7B1CFDB52800E3DAA0 /* SampleXML */ = {isa = PBXFileReference; explicitFileType = text.xml; fileEncoding = 4; name = SampleXML; path = ../SampleXML; sourceTree = "<group>"; };
 		877BD78F1C99F46000398BF4 /* CANimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CANimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		877BD7931C99F46000398BF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		877BD7951C99F46100398BF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,7 +116,7 @@
 			name = CAEmitterLayer;
 			sourceTree = "<group>";
 		};
-		871029771CCE9A1E00E99C8A /* Sound */ = {
+		871029771CCE9A1E00E99C8A /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
 				8709F3411CDF7ECE002BE9BC /* button_press.wav */,
@@ -125,7 +127,7 @@
 				8710296C1CCE851F00E99C8A /* coinsound.mp3 */,
 				8710296A1CCE6D7000E99C8A /* battle.mp3 */,
 			);
-			name = Sound;
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 		871029781CCE9A8300E99C8A /* Storyboards */ = {
@@ -252,7 +254,8 @@
 		877BD7921C99F46000398BF4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				871029771CCE9A1E00E99C8A /* Sound */,
+				8744CC7B1CFDB52800E3DAA0 /* SampleXML */,
+				871029771CCE9A1E00E99C8A /* Sounds */,
 				8710297F1CCE9D2600E99C8A /* Categories */,
 				871211631CAAD65A00289B8C /* GoogleService-Info.plist */,
 				877BD79E1C99F46200398BF4 /* Assets.xcassets */,
@@ -328,6 +331,7 @@
 				8709F3421CDF7ECE002BE9BC /* button_press.wav in Resources */,
 				8709F3401CDF7D15002BE9BC /* monster.wav in Resources */,
 				877BD7A21C99F46200398BF4 /* LaunchScreen.storyboard in Resources */,
+				8744CC7C1CFDB52800E3DAA0 /* SampleXML in Resources */,
 				8710296F1CCE8AD400E99C8A /* powerup.wav in Resources */,
 				871029711CCE8D9700E99C8A /* mariodie.wav in Resources */,
 				870D079B1CC6585100E5560F /* GameStoryboard.storyboard in Resources */,
@@ -514,6 +518,8 @@
 			baseConfigurationReference = 78EC8CBF724E3B7B0874CD91 /* Pods-CANimations.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CANimations/Documents/FacebookSDK",
@@ -523,6 +529,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VG.CANimations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -532,6 +539,8 @@
 			baseConfigurationReference = 11195716F3178C0697760735 /* Pods-CANimations.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CANimations/Documents/FacebookSDK",
@@ -541,6 +550,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VG.CANimations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

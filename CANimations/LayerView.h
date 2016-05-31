@@ -15,6 +15,8 @@
 @property (strong, nonatomic) CALayer *coinLayer;
 @property (strong, nonatomic) CALayer *lazerLayer;
 @property (strong, nonatomic) CALayer *burstLayer;
+@property (strong, nonatomic) CAEmitterLayer *flyInSpace;
+@property (strong, nonatomic) CAEmitterLayer *exhaustEmitter;
 
 @property (strong, nonatomic) NSMutableArray *coins;
 @property (assign, nonatomic) NSInteger coinsCount;
@@ -25,5 +27,6 @@
 - (float)angleForLayer:(CALayer *)layer withTouchPoint:(CGPoint)point;
 - (CALayer *)getCoinLayerInPosition:(CGPoint)point withImage:(CGImageRef)coinImage;
 - (void)setLayerContents:(CALayer *)layer withImageName:(NSString *)name;
+- (void)animateFlyToCoin:(BOOL)animate;
 
 @end

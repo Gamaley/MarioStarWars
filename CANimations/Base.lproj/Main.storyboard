@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZI3-SX-aP9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZI3-SX-aP9">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nr1-w8-vfP" customClass="GIDSignInButton">
-                                <rect key="frame" x="84" y="241" width="111" height="51"/>
+                                <rect key="frame" x="105" y="163" width="111" height="51"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="lEs-UN-Aw8"/>
@@ -29,7 +29,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKl-go-pPc" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="84" y="198" width="111" height="30"/>
+                                <rect key="frame" x="105" y="120" width="111" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="VZQ-DJ-RHP"/>
                                     <constraint firstAttribute="width" constant="111" id="kWc-iv-Lmf"/>
@@ -37,7 +37,7 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kc0-FO-hQx">
-                                <rect key="frame" x="85" y="392" width="111" height="30"/>
+                                <rect key="frame" x="106" y="294" width="111" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="VIa-cF-70M"/>
@@ -52,7 +52,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Level" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H1c-2R-gsL">
-                                <rect key="frame" x="85" y="344" width="111" height="30"/>
+                                <rect key="frame" x="106" y="246" width="111" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="111" id="TCD-io-J9V"/>
                                 </constraints>
@@ -65,14 +65,14 @@
                             <constraint firstItem="Kc0-FO-hQx" firstAttribute="top" secondItem="H1c-2R-gsL" secondAttribute="bottom" constant="18" id="2Y9-Iy-fbh"/>
                             <constraint firstItem="Nr1-w8-vfP" firstAttribute="centerX" secondItem="TKl-go-pPc" secondAttribute="centerX" id="90v-e8-OVT"/>
                             <constraint firstItem="Kc0-FO-hQx" firstAttribute="centerX" secondItem="TKl-go-pPc" secondAttribute="centerX" constant="1" id="9ti-ka-DrT"/>
-                            <constraint firstItem="TKl-go-pPc" firstAttribute="leading" secondItem="8hK-Pa-x19" secondAttribute="leading" constant="84" id="Kpn-sE-yug"/>
+                            <constraint firstItem="TKl-go-pPc" firstAttribute="leading" secondItem="8hK-Pa-x19" secondAttribute="leading" constant="105" id="Kpn-sE-yug"/>
                             <constraint firstItem="dIk-86-XGz" firstAttribute="leading" secondItem="8hK-Pa-x19" secondAttribute="leading" id="YBy-nG-91N"/>
-                            <constraint firstItem="Kc0-FO-hQx" firstAttribute="top" secondItem="Nr1-w8-vfP" secondAttribute="bottom" constant="100" id="ePq-ZT-G8i"/>
+                            <constraint firstItem="Kc0-FO-hQx" firstAttribute="top" secondItem="Nr1-w8-vfP" secondAttribute="bottom" constant="80" id="ePq-ZT-G8i"/>
                             <constraint firstItem="Nr1-w8-vfP" firstAttribute="top" secondItem="TKl-go-pPc" secondAttribute="bottom" constant="13" id="fvv-dx-28d"/>
                             <constraint firstItem="dIk-86-XGz" firstAttribute="top" secondItem="8hK-Pa-x19" secondAttribute="top" id="kjr-dv-uQ2"/>
                             <constraint firstAttribute="trailing" secondItem="dIk-86-XGz" secondAttribute="trailing" id="t1m-nR-vRO"/>
                             <constraint firstItem="H1c-2R-gsL" firstAttribute="centerX" secondItem="TKl-go-pPc" secondAttribute="centerX" constant="1" id="tFi-da-Htn"/>
-                            <constraint firstItem="TKl-go-pPc" firstAttribute="top" secondItem="HOn-SU-mWC" secondAttribute="bottom" constant="178" id="v9w-hw-412"/>
+                            <constraint firstItem="TKl-go-pPc" firstAttribute="top" secondItem="HOn-SU-mWC" secondAttribute="bottom" constant="100" id="v9w-hw-412"/>
                             <constraint firstItem="mHZ-hF-kSe" firstAttribute="top" secondItem="dIk-86-XGz" secondAttribute="bottom" id="yEo-9B-Upe"/>
                         </constraints>
                     </view>
