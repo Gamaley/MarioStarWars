@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8705BAA31CFF1A4100165944 /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8705BAA21CFF1A4100165944 /* SampleViewController.m */; };
 		8709F3401CDF7D15002BE9BC /* monster.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8709F33F1CDF7D15002BE9BC /* monster.wav */; };
 		8709F3421CDF7ECE002BE9BC /* button_press.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8709F3411CDF7ECE002BE9BC /* button_press.wav */; };
 		8709F3461CDF99C3002BE9BC /* FireworksEmitterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8709F3451CDF99C3002BE9BC /* FireworksEmitterView.m */; };
@@ -21,7 +22,9 @@
 		871029761CCE910900E99C8A /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 871029751CCE910900E99C8A /* SoundManager.m */; };
 		871029841CCE9E9300E99C8A /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 871029831CCE9E9300E99C8A /* Level.m */; };
 		871211641CAAD65A00289B8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 871211631CAAD65A00289B8C /* GoogleService-Info.plist */; };
-		8744CC7C1CFDB52800E3DAA0 /* SampleXML in Resources */ = {isa = PBXBuildFile; fileRef = 8744CC7B1CFDB52800E3DAA0 /* SampleXML */; };
+		8744CC821CFDCCA600E3DAA0 /* Sample.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8744CC811CFDCCA600E3DAA0 /* Sample.xml */; };
+		8744CC851CFDD7B400E3DAA0 /* XMLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8744CC841CFDD7B400E3DAA0 /* XMLTableViewController.m */; };
+		8744CC891CFDD9CE00E3DAA0 /* Sample.m in Sources */ = {isa = PBXBuildFile; fileRef = 8744CC881CFDD9CE00E3DAA0 /* Sample.m */; };
 		877BD7941C99F46000398BF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 877BD7931C99F46000398BF4 /* main.m */; };
 		877BD7971C99F46100398BF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 877BD7961C99F46100398BF4 /* AppDelegate.m */; };
 		877BD79A1C99F46100398BF4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 877BD7991C99F46100398BF4 /* ViewController.m */; };
@@ -31,6 +34,7 @@
 		877BD7AB1C99F5D200398BF4 /* LayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 877BD7AA1C99F5D200398BF4 /* LayerView.m */; };
 		877BD7AD1C99F62800398BF4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877BD7AC1C99F62800398BF4 /* QuartzCore.framework */; };
 		879922E41CAAB73D00F14517 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879922E31CAAB73D00F14517 /* CoreViewController.m */; };
+		879B415C1CFF0D4A003BCA9B /* SampleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 879B415B1CFF0D4A003BCA9B /* SampleTableViewCell.m */; };
 		DB011CB4E9F87F51FD720AB3 /* libPods-CANimations.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B8F410D7F2B967353E3DD5 /* libPods-CANimations.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +42,8 @@
 		11195716F3178C0697760735 /* Pods-CANimations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CANimations.release.xcconfig"; path = "Pods/Target Support Files/Pods-CANimations/Pods-CANimations.release.xcconfig"; sourceTree = "<group>"; };
 		56B8F410D7F2B967353E3DD5 /* libPods-CANimations.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CANimations.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EC8CBF724E3B7B0874CD91 /* Pods-CANimations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CANimations.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CANimations/Pods-CANimations.debug.xcconfig"; sourceTree = "<group>"; };
+		8705BAA11CFF1A4100165944 /* SampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleViewController.h; sourceTree = "<group>"; };
+		8705BAA21CFF1A4100165944 /* SampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleViewController.m; sourceTree = "<group>"; };
 		8709F33F1CDF7D15002BE9BC /* monster.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monster.wav; sourceTree = "<group>"; };
 		8709F3411CDF7ECE002BE9BC /* button_press.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button_press.wav; sourceTree = "<group>"; };
 		8709F3441CDF99C3002BE9BC /* FireworksEmitterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireworksEmitterView.h; sourceTree = "<group>"; };
@@ -56,7 +62,11 @@
 		871029821CCE9E9300E99C8A /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
 		871029831CCE9E9300E99C8A /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 		871211631CAAD65A00289B8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		8744CC7B1CFDB52800E3DAA0 /* SampleXML */ = {isa = PBXFileReference; explicitFileType = text.xml; fileEncoding = 4; name = SampleXML; path = ../SampleXML; sourceTree = "<group>"; };
+		8744CC811CFDCCA600E3DAA0 /* Sample.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Sample.xml; sourceTree = "<group>"; };
+		8744CC831CFDD7B400E3DAA0 /* XMLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLTableViewController.h; sourceTree = "<group>"; };
+		8744CC841CFDD7B400E3DAA0 /* XMLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLTableViewController.m; sourceTree = "<group>"; };
+		8744CC871CFDD9CE00E3DAA0 /* Sample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sample.h; sourceTree = "<group>"; };
+		8744CC881CFDD9CE00E3DAA0 /* Sample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sample.m; sourceTree = "<group>"; };
 		877BD78F1C99F46000398BF4 /* CANimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CANimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		877BD7931C99F46000398BF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		877BD7951C99F46100398BF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +82,8 @@
 		877BD7AC1C99F62800398BF4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		879922E21CAAB73D00F14517 /* CoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreViewController.h; sourceTree = "<group>"; };
 		879922E31CAAB73D00F14517 /* CoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreViewController.m; sourceTree = "<group>"; };
+		879B415A1CFF0D4A003BCA9B /* SampleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleTableViewCell.h; sourceTree = "<group>"; };
+		879B415B1CFF0D4A003BCA9B /* SampleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +117,24 @@
 				11195716F3178C0697760735 /* Pods-CANimations.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8705BA9F1CFF19D500165944 /* SampleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8705BAA11CFF1A4100165944 /* SampleViewController.h */,
+				8705BAA21CFF1A4100165944 /* SampleViewController.m */,
+			);
+			name = SampleViewController;
+			sourceTree = "<group>";
+		};
+		8705BAA01CFF19F100165944 /* CoreViewController */ = {
+			isa = PBXGroup;
+			children = (
+				879922E21CAAB73D00F14517 /* CoreViewController.h */,
+				879922E31CAAB73D00F14517 /* CoreViewController.m */,
+			);
+			name = CoreViewController;
 			sourceTree = "<group>";
 		};
 		8709F3431CDF9971002BE9BC /* CAEmitterLayer */ = {
@@ -161,8 +191,9 @@
 		8710297B1CCE9B2C00E99C8A /* MainStoryboard */ = {
 			isa = PBXGroup;
 			children = (
-				879922E21CAAB73D00F14517 /* CoreViewController.h */,
-				879922E31CAAB73D00F14517 /* CoreViewController.m */,
+				8705BA9F1CFF19D500165944 /* SampleViewController */,
+				8705BAA01CFF19F100165944 /* CoreViewController */,
+				8744CC861CFDD7C000E3DAA0 /* XMLTableViewController */,
 			);
 			name = MainStoryboard;
 			sourceTree = "<group>";
@@ -205,6 +236,7 @@
 		871029801CCE9D9500E99C8A /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				879B41591CFF0D19003BCA9B /* UItableViewCell */,
 				8709F3431CDF9971002BE9BC /* CAEmitterLayer */,
 				871029791CCE9ACF00E99C8A /* CALayerView */,
 			);
@@ -216,8 +248,19 @@
 			children = (
 				871029821CCE9E9300E99C8A /* Level.h */,
 				871029831CCE9E9300E99C8A /* Level.m */,
+				8744CC871CFDD9CE00E3DAA0 /* Sample.h */,
+				8744CC881CFDD9CE00E3DAA0 /* Sample.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		8744CC861CFDD7C000E3DAA0 /* XMLTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8744CC831CFDD7B400E3DAA0 /* XMLTableViewController.h */,
+				8744CC841CFDD7B400E3DAA0 /* XMLTableViewController.m */,
+			);
+			name = XMLTableViewController;
 			sourceTree = "<group>";
 		};
 		877BD7861C99F46000398BF4 = {
@@ -254,10 +297,10 @@
 		877BD7921C99F46000398BF4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8744CC7B1CFDB52800E3DAA0 /* SampleXML */,
 				871029771CCE9A1E00E99C8A /* Sounds */,
 				8710297F1CCE9D2600E99C8A /* Categories */,
 				871211631CAAD65A00289B8C /* GoogleService-Info.plist */,
+				8744CC811CFDCCA600E3DAA0 /* Sample.xml */,
 				877BD79E1C99F46200398BF4 /* Assets.xcassets */,
 				877BD7951C99F46100398BF4 /* AppDelegate.h */,
 				877BD7961C99F46100398BF4 /* AppDelegate.m */,
@@ -265,6 +308,15 @@
 				877BD7931C99F46000398BF4 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		879B41591CFF0D19003BCA9B /* UItableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				879B415A1CFF0D4A003BCA9B /* SampleTableViewCell.h */,
+				879B415B1CFF0D4A003BCA9B /* SampleTableViewCell.m */,
+			);
+			name = UItableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,9 +383,9 @@
 				8709F3421CDF7ECE002BE9BC /* button_press.wav in Resources */,
 				8709F3401CDF7D15002BE9BC /* monster.wav in Resources */,
 				877BD7A21C99F46200398BF4 /* LaunchScreen.storyboard in Resources */,
-				8744CC7C1CFDB52800E3DAA0 /* SampleXML in Resources */,
 				8710296F1CCE8AD400E99C8A /* powerup.wav in Resources */,
 				871029711CCE8D9700E99C8A /* mariodie.wav in Resources */,
+				8744CC821CFDCCA600E3DAA0 /* Sample.xml in Resources */,
 				870D079B1CC6585100E5560F /* GameStoryboard.storyboard in Resources */,
 				8710296D1CCE851F00E99C8A /* coinsound.mp3 in Resources */,
 				871211641CAAD65A00289B8C /* GoogleService-Info.plist in Resources */,
@@ -399,14 +451,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8705BAA31CFF1A4100165944 /* SampleViewController.m in Sources */,
 				879922E41CAAB73D00F14517 /* CoreViewController.m in Sources */,
 				877BD79A1C99F46100398BF4 /* ViewController.m in Sources */,
 				871029841CCE9E9300E99C8A /* Level.m in Sources */,
 				877BD7971C99F46100398BF4 /* AppDelegate.m in Sources */,
 				877BD7AB1C99F5D200398BF4 /* LayerView.m in Sources */,
+				879B415C1CFF0D4A003BCA9B /* SampleTableViewCell.m in Sources */,
 				877BD7941C99F46000398BF4 /* main.m in Sources */,
 				871029761CCE910900E99C8A /* SoundManager.m in Sources */,
+				8744CC851CFDD7B400E3DAA0 /* XMLTableViewController.m in Sources */,
 				870D07971CC654D900E5560F /* UIWindow+AdvancedWindow.m in Sources */,
+				8744CC891CFDD9CE00E3DAA0 /* Sample.m in Sources */,
 				8709F3461CDF99C3002BE9BC /* FireworksEmitterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

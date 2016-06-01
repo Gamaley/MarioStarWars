@@ -23,7 +23,7 @@
         <author>Corets, Eva</author>
         <title>Maeve Ascendant</title>
         <genre>Fantasy</genre>
-        <price>5.95</price>
+        <price>6.66</price>
         <publish_date>2000-11-17</publish_date>
         <description>After the collapse of a nanotechnology
         society in England, the young survivors lay the
@@ -63,7 +63,7 @@
         <author>Thurman, Paula</author>
         <title>Splish Splash</title>
         <genre>Romance</genre>
-        <price>4.95</price>
+        <price>14.95</price>
         <publish_date>2000-11-02</publish_date>
         <description>A deep sea diver finds true love twenty
         thousand leagues beneath the sea.</description>
@@ -72,7 +72,7 @@
         <author>Knorr, Stefan</author>
         <title>Creepy Crawlies</title>
         <genre>Horror</genre>
-        <price>4.95</price>
+        <price>3.95</price>
         <publish_date>2000-12-06</publish_date>
         <description>An anthology of horror stories about roaches,
         centipedes, scorpions  and other insects.</description>
@@ -81,7 +81,7 @@
         <author>Kress, Peter</author>
         <title>Paradox Lost</title>
         <genre>Science Fiction</genre>
-        <price>6.95</price>
+        <price>6.55</price>
         <publish_date>2000-11-02</publish_date>
         <description>After an inadvertant trip through a Heisenberg
         Uncertainty Device, James Salway discovers the problems
@@ -100,7 +100,7 @@
         <author>O'Brien, Tim</author>
         <title>MSXML3: A Comprehensive Guide</title>
         <genre>Computer</genre>
-        <price>36.95</price>
+        <price>136.95</price>
         <publish_date>2000-12-01</publish_date>
         <description>The Microsoft MSXML3 parser is covered in
         detail, with attention to XML DOM interfaces, XSLT processing,
@@ -110,7 +110,7 @@
         <author>Galos, Mike</author>
         <title>Visual Studio 7: A Comprehensive Guide</title>
         <genre>Computer</genre>
-        <price>49.95</price>
+        <price>439.95</price>
         <publish_date>2001-04-16</publish_date>
         <description>Microsoft Visual Studio 7 is explored in depth,
         looking at how Visual Basic, Visual C++, C#, and ASP+ are

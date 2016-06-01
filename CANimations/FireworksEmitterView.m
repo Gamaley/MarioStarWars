@@ -68,7 +68,6 @@
         burst.emitterCells = @[spark];
 
         [self.layer addSublayer:fireworksEmitter];
-        
     }
     return self;
 }

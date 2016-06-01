@@ -30,7 +30,6 @@
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
     
-    [SoundManager defaultManager];
     return YES;
 }
 

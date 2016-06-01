@@ -18,8 +18,9 @@
 
 static const CGFloat FacebookLoginButtonWidth = 124.f;
 
-@interface CoreViewController () <FBSDKLoginButtonDelegate, GIDSignInUIDelegate>
+@interface CoreViewController () <FBSDKLoginButtonDelegate, GIDSignInUIDelegate, NSXMLParserDelegate>
 
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (weak, nonatomic) IBOutlet FBSDKLoginButton *loginButton;
 @property (weak, nonatomic) IBOutlet GIDSignInButton *googleButton;
 @property (weak, nonatomic) IBOutlet UITextField *levelTextField;
@@ -38,6 +39,8 @@ static const CGFloat FacebookLoginButtonWidth = 124.f;
 //    self.loginButton.delegate = self;
     self.loginButton.loginBehavior = FBSDKLoginBehaviorWeb;
     [GIDSignIn sharedInstance].uiDelegate = self;
+    [SoundManager defaultManager];
+    [self setupBackgroundImageView];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -78,6 +81,16 @@ static const CGFloat FacebookLoginButtonWidth = 124.f;
 
 #pragma mark - Private
 
+- (void)setupBackgroundImageView
+{
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.view.bounds;
+    gradient.colors = @[(id)[UIColor colorWithWhite:0.0 alpha:1].CGColor ,(id)[UIColor clearColor].CGColor];
+    gradient.startPoint = CGPointMake(0.5, 1.0);
+    gradient.endPoint = CGPointMake(0.5, 0.5);
+    [self.backgroundImageView.layer insertSublayer:gradient atIndex:0];
+}
+
 - (void)shakeTextField
 {
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"position.x"];
@@ -116,7 +129,6 @@ static const CGFloat FacebookLoginButtonWidth = 124.f;
 {
     
 }
-
 
 - (void)signIn:(GIDSignIn *)signIn dismissViewController:(UIViewController *)viewController
 {
